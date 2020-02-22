@@ -1,0 +1,124 @@
+:root{
+	--phcolor:rgba(50,130,50);
+	--btncolor:rgba(50,170,50);
+	--imgcolor:rgba(50,170,70,0.9);
+	--hoverandfocuscolor:rgba(50,100,50);
+}
+
+*{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+
+body{
+	background:url("../img/bg.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+	min-height:100vh;
+	width:100%;
+	display:grid;
+	place-items:center;
+	
+}
+
+/*box that wrap whole form*/
+.modal-content{
+	background:#333;
+	/*padding-bottom:1.1rem;*/
+	padding: 0 1rem 1.1rem;
+}
+
+/*image section*/
+.modal-content .user-img{
+	/*background:#333;*/
+	margin-top:-5rem;
+	/*padding: 0 2rem;*/
+	
+}
+
+.modal-content .user-img img{
+	width:7rem;
+	box-shadow:0 0 5px #333;
+	margin-bottom:1.5rem;
+	background:var(--imgcolor);
+}
+
+/*input*/
+.modal-content .form-control{
+	border:0;
+	/*padding:2rem;*/
+}
+.modal-content .form-control:focus::placeholder{
+	color:var(--phcolor);
+	opacity:0.85;
+}
+.modal-content .form-control::placeholder{
+	text-align:center;
+	opacity:0.45;
+}
+
+/*button*/
+.modal-content .btn{
+	background:var(--btncolor);
+	border:none;
+	color:#f4f4f4;
+	width:50%;
+	outline:none;
+}
+
+/*icon from button*/
+.modal-content .fa-sign-in-alt{
+	margin-right:.3rem;
+}
+
+.modal-content .btn:focus, .modal-content .btn:hover{
+	background:var(--hoverandfocuscolor);
+}
+
+/*forgot password section*/
+.forgot{
+	margin-top:1rem;
+}
+
+.forgot a{
+	color:#f4f4f4;
+	text-decoration:none;
+}
+
+.forgot a:hover{
+	color:var(--btncolor);
+}
+
+/*large screens*/
+
+@media(min-width:768px){
+	.modal-content{
+		min-width:500px !important;
+	}
+	
+	.modal-content .user-img img{
+		width:9rem;
+	}
+	.modal-content .form-control{
+		padding:1.9rem;
+	}
+	
+	.modal-content .form-control::placeholder{
+		font-size:1.5rem;
+	}
+	.modal-content .btn{
+		width:100%;
+		font-size:1.5rem;
+	}
+	
+	.modal-content .forgot{
+		padding:.5rem 0;
+	}
+	.modal-content .forgot a{
+		font-size:1.5rem;
+		outline:0;
+	}
+	
+}
